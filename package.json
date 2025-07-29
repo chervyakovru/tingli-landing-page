@@ -1,7 +1,6 @@
 {
-  "name": "daniilchervyakov174_s_application",
+  "name": "tingli-landing-page",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev -p 4028",
     "build": "next build",
