@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         className={`flex w-full items-center justify-between ${className}`}
       >
         {/* Logo */}
-        <div className="flex-shrink-0 px-[31px] py-[10px]">
+        <div className="flex-shrink-0 px-[31px] py-[9px]">
           <Image src={logoImage} alt="Tingli Logo" width={80} height={38} />
         </div>
 
@@ -45,23 +45,23 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
             <TooltipContent
               className="text-global-2 max-w-[300px] rounded-[28px] border border-gray-100 bg-white p-4 shadow-lg"
               side="bottom"
+              sideOffset={10}
               align="end"
             >
-              <p className="text-global-2 text-[14px]">
-                Платформа Tingli разработана в рамках образовательного
-                направления компании РВБ (Объединенная компания Wildberries &
-                Russ)
+              <p className="text-global-2 mb-[10px] text-[16px] font-medium">
+                В основе нашей платформы
+              </p>
+              <p className="text-global-2 text-[14px] leading-[1.5]">
+                Технологии искусственного интеллекта (LLM),которые
+                персонализируют обучение для ученика и&nbsp;помогут
+                автоматизировать рутину преподавателей (в&nbsp;ближайших
+                обновлениях)
               </p>
             </TooltipContent>
           </Tooltip>
 
           {/* Download App Button */}
-          <Button
-            as={'a'}
-            href={'#download-app'}
-            className="text-global-5 bg-button-1 whitespace-nowrap rounded-button px-3 py-3 text-center font-inter text-[16px] font-semibold lg:leading-[20px]"
-            variant="primary"
-          >
+          <Button as={'a'} href={'#download-app'} variant="primary">
             Скачать приложение
           </Button>
         </div>

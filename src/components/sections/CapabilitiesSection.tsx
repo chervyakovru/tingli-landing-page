@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import CapabilityCard from '@/components/cards/CapabilityCard';
+import Section from '@/components/common/Section';
 import dialogsImage from './images/dialogs.png';
 import lessonsImage from './images/lessons.png';
 import repeatsImage from './images/repeats.png';
@@ -35,9 +36,9 @@ const CapabilitiesSection: React.FC = () => {
   ];
 
   return (
-    <div className="flex w-full flex-col items-center gap-[16px] lg:gap-[32px]">
-      <h2 className="text-center text-[36px] lg:text-[48px]">Возможности</h2>
-      <div className="grid w-full grid-cols-1 gap-[20px] lg:grid-cols-2 lg:gap-[40px]">
+    <Section>
+      <Section.Header>Возможности</Section.Header>
+      <div className="grid w-full grid-cols-1 gap-[16px] lg:grid-cols-2 lg:gap-[40px]">
         {capabilities.map((capability, index) => (
           <CapabilityCard
             key={index}
@@ -47,7 +48,7 @@ const CapabilitiesSection: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 

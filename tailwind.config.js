@@ -17,7 +17,8 @@ module.exports = {
           text5: 'var(--global-text-5)',
         },
         button: {
-          background1: 'var(--button-bg-1)',
+          1: 'var(--button-bg-1)',
+          2: 'var(--button-bg-2)',
           text1: 'var(--button-text-1)',
         },
         gradient: {

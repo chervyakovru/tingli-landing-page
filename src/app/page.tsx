@@ -10,11 +10,13 @@ import FooterSection from '@/components/sections/FooterSection';
 
 const TingliHomePage: React.FC = () => {
   return (
-    <div className="flex w-full flex-col items-center gap-[80px] lg:gap-[120px]">
-      <div className="flex w-full max-w-[1400px] flex-col items-center gap-[24px] px-[0px] lg:px-[62px] lg:pt-[16px]">
-        <div className="hidden w-full lg:block">
+    <div className="flex w-full flex-col items-center gap-[80px] pb-[16px] lg:gap-[120px] lg:pb-[88px] lg:pt-[60px]">
+      <div className="bg bg-global-2 fixed left-0 right-0 top-0 z-50 hidden w-full justify-center lg:flex">
+        <div className="flex w-full max-w-[1440px] px-[0px] lg:px-[62px] lg:py-[16px]">
           <Header />
         </div>
+      </div>
+      <div className="flex w-full max-w-[1440px] px-[0px] lg:px-[62px] lg:pt-[8px]">
         <HeroSection />
       </div>
 
@@ -34,7 +36,7 @@ const TingliHomePage: React.FC = () => {
         <MobileAppDownloadSection />
       </div>
 
-      <div className="flex w-full max-w-[1400px] px-[0px] lg:px-[62px]">
+      <div className="flex w-full max-w-[1440px] px-[16px] lg:px-[62px]">
         <FooterSection />
       </div>
     </div>

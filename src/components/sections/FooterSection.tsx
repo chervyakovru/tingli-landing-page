@@ -14,10 +14,11 @@ const FooterSection: React.FC = () => {
         className="mb-[50px] block lg:mb-[36px]"
       />
       <div className="bg-global-1 mb-[40px] h-[1px] w-full rounded-[1px] lg:mb-[80px]"></div>
-      <div className="flex w-full flex-col-reverse items-center justify-center gap-[12px] text-center lg:mb-[8px] lg:flex-row lg:gap-[24px] lg:text-left">
+      <div className="flex w-full flex-col-reverse items-center justify-center gap-[20px] text-center lg:mb-[8px] lg:flex-row lg:gap-[24px] lg:text-left">
         <div className="flex items-end">
           <p className="text-[14px] leading-[1.8] lg:text-[16px]">
-            Если появились вопросы - напиши нам на почту{' '}
+            Если появились вопросы - напиши нам на почту
+            <br className="lg:hidden" />
             <a
               href="mailto:help.tingli@rwb.ru"
               className="text-accent-purple font-semibold underline"
@@ -26,7 +27,7 @@ const FooterSection: React.FC = () => {
             </a>
           </p>
         </div>
-        <div className="flex flex-col items-center justify-end gap-[14px] lg:flex-row lg:gap-[28px]">
+        <div className="flex flex-col items-center justify-end gap-[20px] lg:flex-row lg:gap-[28px]">
           <a
             href="https://legal.wildberries.ru/privacy-policy-education-services/country/ru/lang/ru/"
             target="_blank"

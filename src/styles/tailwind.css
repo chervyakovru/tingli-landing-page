@@ -18,6 +18,8 @@
 
     /* Button Colors */
     --button-bg-1: #000000;
+    --button-bg-2: #18181B;
+
     --button-text-1: #141414;
     
     /* Gradient Colors */
@@ -133,6 +135,9 @@
   .bg-button-1 {
     background-color: var(--button-bg-1);
   }
+  .bg-button-2 {
+    background-color: var(--button-bg-2);
+  }
   .text-button-1 {
     color: var(--button-text-1);
   }
@@ -185,5 +190,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Default line-height for all text elements */
+  * {
+    line-height: 160%;
   }
 }

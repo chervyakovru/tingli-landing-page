@@ -24,8 +24,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           className="h-[24px] w-[24px] lg:h-[32px] lg:w-[32px]"
         />
       </div>
-      <div className="flex flex-col items-start gap-[8px] lg:items-center">
-        <h3 className="text-global-2 text-left text-[18px] font-medium lg:text-center lg:text-[20px]">
+      <div className="flex flex-col items-start gap-[8px] lg:items-center lg:gap-[16px]">
+        <h3 className="text-global-2 text-left text-[18px] font-medium leading-[1.2] tracking-[-1px] lg:text-center lg:text-[20px]">
           {title}
         </h3>
         <p

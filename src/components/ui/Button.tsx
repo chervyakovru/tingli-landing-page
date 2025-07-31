@@ -3,12 +3,11 @@ import React, { ElementType } from 'react';
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'primary' | 'secondary';
+  size?: 'md' | 'lg';
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
   className?: string;
-  fullWidth?: boolean;
   loading?: boolean;
   as?: ElementType;
   href?: string;
@@ -25,7 +24,6 @@ const Button: React.FC<
   disabled = false,
   type = 'button',
   className = '',
-  fullWidth = false,
   loading = false,
   as,
   href,
@@ -34,24 +32,19 @@ const Button: React.FC<
 }) => {
   const variants = {
     primary:
-      'bg-button-1 text-global-5 hover:bg-gray-800 active:bg-gray-900 focus:ring-gray-500',
+      'bg-button-1 text-global-5 hover:bg-button-2 active:bg-button-2 focus:ring-gray-500',
     secondary:
-      'bg-white text-gray-800 hover:bg-gray-300 active:bg-gray-400 focus:ring-gray-300',
-    outline:
-      'border border-gray-300 text-gray-700 bg-transparent hover:bg-gray-50 active:bg-gray-100 focus:ring-gray-300',
-    ghost:
-      'text-gray-700 bg-transparent hover:bg-gray-100 active:bg-gray-200 focus:ring-gray-300',
-    danger:
-      'bg-red-600 text-white hover:bg-red-700 active:bg-red-800 focus:ring-red-500',
+      'bg-global-4 text-button-1 hover:bg-global-2 active:bg-global-2 focus:ring-gray-300',
   };
 
   // Mobile-first responsive sizes
   const sizes = {
-    xs: 'px-2 py-1 text-xs',
-    sm: 'px-2.5 py-1.5 text-xs',
-    md: 'px-3 py-[16px] text-[16px]',
-    lg: 'px-[16px] py-6 text-[18px] lg:text-[20px]',
-    xl: 'px-5 py-3 text-lg lg:text-2xl',
+    md: 'px-[18px] py-[16px] text-[16px] leading-[1.5]',
+    lg: 'px-[16px] py-6 text-[18px] lg:text-[20px] leading-[1.2]',
+  };
+  const spanLineHeight = {
+    md: 'leading-[1.5]',
+    lg: 'leading-[1.2]',
   };
 
   // Responsive border radius
@@ -93,7 +86,7 @@ const Button: React.FC<
       target={target}
       onClick={disabled || loading ? undefined : onClick}
       disabled={disabled || loading}
-      className={` ${responsiveRadius} focus:outline-none ${responsiveFocus} focus:ring-opacity-50 ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${disabled || loading ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} ${loading ? 'relative' : ''} inline-flex min-h-[44px] touch-manipulation items-center justify-center font-medium ${className} `
+      className={` ${responsiveRadius} focus:outline-none ${responsiveFocus} focus:ring-opacity-50 ${variants[variant]} ${sizes[size]} ${disabled || loading ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'} ${loading ? 'relative' : ''} inline-flex min-h-[44px] touch-manipulation items-center justify-center font-medium ${className} `
         .trim()
         .replace(/\s+/g, ' ')}
       aria-disabled={disabled || loading}
@@ -101,7 +94,11 @@ const Button: React.FC<
       {...props}
     >
       {loading && <LoadingSpinner />}
-      <span className={loading ? 'opacity-75' : ''}>{children}</span>
+      <span
+        className={`${loading ? 'opacity-75' : ''} ${spanLineHeight[size]}`}
+      >
+        {children}
+      </span>
     </Component>
   );
 };

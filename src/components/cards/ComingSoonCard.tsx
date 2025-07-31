@@ -30,7 +30,7 @@ const ComingSoonCard: React.FC<ComingSoonCardProps> = ({
 
   return (
     <div
-      className={`${bgClass} flex w-full flex-col gap-[22px] rounded-[32px] p-[20px] lg:rounded-[62px] lg:p-[28px]`}
+      className={`${bgClass} flex w-full flex-col gap-[36px] rounded-[32px] p-[20px] lg:gap-[24px] lg:rounded-[62px] lg:p-[28px]`}
     >
       <div className={`flex items-start gap-[16px] lg:flex-col lg:gap-[24px]`}>
         <div
@@ -40,7 +40,7 @@ const ComingSoonCard: React.FC<ComingSoonCardProps> = ({
         </div>
         <div className="flex flex-col gap-[8px] lg:gap-[12px]">
           <h3
-            className={`text-left text-[18px] font-medium lg:text-[20px] ${textColorClass}`}
+            className={`text-left text-[18px] font-medium leading-[1.2] tracking-[-1px] lg:text-[20px] ${textColorClass}`}
           >
             {title}
           </h3>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import FeatureCard from '@/components/cards/FeatureCard';
+import Section from '@/components/common/Section';
 import personalIconImage from './images/img_icon.svg';
 import travelIconImage from './images/img_icon_black_900.svg';
 import educationIconImage from './images/img_icon_black_900_32x32.svg';
@@ -34,12 +35,10 @@ const FeaturesSection: React.FC = () => {
   ];
 
   return (
-    <div className="flex w-full flex-col items-center gap-[32px] lg:gap-[40px]">
-      <h2 className="text-center text-[36px] lg:text-[48px]">
-        Твои возможности с&nbsp;Tingli
-      </h2>
+    <Section>
+      <Section.Header>Твои возможности с&nbsp;Tingli</Section.Header>
       <div className="bg-global-4 w-full rounded-[32px] p-[20px] lg:rounded-[52px] lg:p-[40px]">
-        <div className="grid grid-cols-1 gap-[20px] lg:grid-cols-4 lg:gap-[46px]">
+        <div className="grid grid-cols-1 gap-[20px] lg:grid-cols-4 lg:gap-[0px]">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -50,7 +49,7 @@ const FeaturesSection: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

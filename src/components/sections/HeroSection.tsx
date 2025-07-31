@@ -10,9 +10,9 @@ const HeroSection: React.FC = () => {
     <div className="relative w-full">
       <HeroHeader />
       <div className="relative flex w-full items-center rounded-[32px] bg-gradient-primary pb-[16px] pt-[165px] lg:rounded-[62px] lg:pb-[74px] lg:pt-[74px]">
-        <div className="flex w-full flex-col items-center gap-[80px]">
-          <div className="flex w-full max-w-[764px] flex-col items-center gap-[20px] px-[22px]">
-            <h1 className="text-global-5 text-center text-[42px] font-bold leading-[1.1] tracking-tighter lg:text-[80px]">
+        <div className="flex w-full flex-col items-center gap-[80px] px-[16px] lg:px-[32px]">
+          <div className="flex w-full max-w-[764px] flex-col items-center gap-[20px]">
+            <h1 className="text-global-5 text-center text-[42px] font-bold leading-[1.1] tracking-[-2px] lg:text-[80px]">
               Tingli&nbsp;&mdash; изучать язык проще, чем&nbsp;кажется
             </h1>
             <p className="text-global-5 text-center text-[18px] lg:text-[24px]">
@@ -21,7 +21,13 @@ const HeroSection: React.FC = () => {
               Wildberries & Russ)
             </p>
           </div>
-          <Button as={'a'} href={'#download-app'} variant="secondary" size="lg">
+          <Button
+            as={'a'}
+            href={'#download-app'}
+            variant="secondary"
+            size="lg"
+            className="w-full lg:w-auto"
+          >
             Скачать приложение
           </Button>
         </div>

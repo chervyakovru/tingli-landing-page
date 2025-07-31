@@ -13,7 +13,7 @@ const MobileAppDownloadSection: React.FC = () => {
       id="download-app"
       className="flex w-full flex-col items-center gap-[40px] overflow-hidden rounded-[32px] bg-gradient-primary px-[16px] lg:flex-row lg:items-end lg:justify-between lg:gap-[86px] lg:rounded-[62px] lg:px-[40px]"
     >
-      <div className="flex max-w-[580px] flex-col items-center pb-0 pt-[20px] lg:items-start lg:pb-[42px] lg:pt-[50px]">
+      <div className="flex max-w-[490px] flex-col items-center pb-0 pt-[20px] lg:items-start lg:pb-[42px] lg:pt-[50px]">
         <Image
           src={logoIconImage}
           alt="Tingli"
@@ -25,11 +25,10 @@ const MobileAppDownloadSection: React.FC = () => {
           Скачайте приложение Tingli
         </h2>
         <p className="text-global-4 hidden text-[16px] lg:block">
-          Отсканируйте QR-код, чтобы скачать приложение ученика
-          <br />
-          или перейдите в один из&nbsp;магазинов
+          Отсканируйте QR-код, чтобы скачать приложение ученика или перейдите в
+          один из&nbsp;магазинов
         </p>
-        <div className="flex w-full flex-col items-center gap-[6px] lg:mt-[40px] lg:flex-row lg:gap-[12px]">
+        <div className="flex w-full flex-col items-center gap-[12px] lg:mt-[40px] lg:flex-row">
           <Button
             as={'a'}
             href={
@@ -37,7 +36,6 @@ const MobileAppDownloadSection: React.FC = () => {
             }
             target="_blank"
             variant="primary"
-            size="lg"
             className="w-full lg:w-[190px]"
           >
             <span className="flex items-center gap-[11px]">
@@ -58,7 +56,6 @@ const MobileAppDownloadSection: React.FC = () => {
             href={'https://apps.apple.com/ru/app/tingli/id6746127518'}
             target="_blank"
             variant="primary"
-            size="lg"
             className="w-full lg:w-[190px]"
           >
             <span className="flex items-center gap-[16px]">

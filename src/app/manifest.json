@@ -1,6 +1,8 @@
 {
   "name": "Tingli",
   "short_name": "Tingli",
+  "start_url": "https://tingli.ru",
+  "scope": "https://tingli.ru",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +17,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#f7f6f9",
+  "background_color": "#f7f6f9",
   "display": "standalone"
 }

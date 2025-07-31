@@ -15,7 +15,7 @@ const CapabilityCard: React.FC<CapabilityCardProps> = ({
 }) => {
   return (
     <div className="bg-global-4 flex w-full flex-col gap-[28px] overflow-hidden rounded-[32px] pt-[28px] lg:gap-[20px] lg:rounded-[52px]">
-      <div className="flex w-full flex-col items-center gap-[8px] lg:items-start lg:gap-[12px] lg:px-[28px]">
+      <div className="flex w-full flex-col items-center gap-[8px] px-[20px] lg:items-start lg:gap-[12px] lg:px-[28px]">
         <div className="mb-[8px]">
           <h3 className="text-global-2 text-[20px] font-normal">{title}</h3>
         </div>
